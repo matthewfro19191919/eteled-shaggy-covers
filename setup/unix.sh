@@ -13,7 +13,7 @@ haxelib install flixel
 haxelib run lime setup flixel
 haxelib run lime setup
 haxelib install flixel-tools
-haxelib run flixel-tools setup -y # Can't do this since it asks [y/n] even with -y argument! Stupid
+haxelib run flixel-tools setup -y
 haxelib install flixel-addons
 haxelib install flixel-ui
 haxelib install hscript
