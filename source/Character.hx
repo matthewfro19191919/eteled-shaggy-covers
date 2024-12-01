@@ -257,6 +257,23 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'shaggy':
+				frames = Paths.getSparrowAtlas('characters/shaggy', 'shared');
+				animation.addByPrefix('danceRight', 'shaggy_idle0', 30, false);
+				animation.addByPrefix('danceLeft', 'shaggy_idle2', 30, false);
+				animation.addByPrefix('singUP', 'shaggy_up', 30, false);
+				animation.addByPrefix('singLEFT', 'shaggy_right', 30, false);
+				animation.addByPrefix('singRIGHT', 'shaggy_left', 30, false);
+				animation.addByPrefix('singDOWN', 'shaggy_down', 30, false);
+
+				barColor = FlxColor.fromRGB(51, 114, 74);
+
+				loadOffsetFile(curCharacter);
+				globalOffset = [0, -350];
+
+				playAnim('danceRight');
+
+				nativelyPlayable = true;
 			case 'bf-mii':
 				noteSkin = 'bf';
 				var tex = Paths.getSparrowAtlas('BOYFRIENDMII','shared',true);
