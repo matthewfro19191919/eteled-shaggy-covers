@@ -4,24 +4,26 @@ cd ..
 @echo on
 echo Installing dependencies...
 echo This might take a few moments depending on your internet speed.
-haxelib install lime 8.1.2
-haxelib install openfl 9.3.3
-haxelib install flixel 4.11.0
-haxelib install flixel-addons 2.11.0
+haxelib install lime 7.9.0
+haxelib install openfl
+haxelib install flixel
+haxelib run lime setup flixel
+haxelib run lime setup
 haxelib install flixel-tools
-haxelib install flixel-ui 2.6.1
-haxelib install actuate 1.9.0 
-haxelib install hxCodec 2.5.1          
-haxelib install linc_luajit
+haxelib run flixel-tools setup -y # Can't do this since it asks [y/n] even with -y argument! Stupid
+haxelib install flixel-addons
+haxelib install flixel-ui
 haxelib install hscript
-haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
-haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
+haxelib install newgrounds
+haxelib install flixel-addons
 haxelib git faxe https://github.com/uhrobots/faxe
 haxelib git polymod https://github.com/larsiusprime/polymod.git
+haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 haxelib git extension-webm https://github.com/KadeDev/extension-webm
-haxelib install hxcpp-debug-server
-haxelib git thx.core https://github.com/fponticelli/thx.core 76d87418fadd92eb8e1b61f004cff27d656e53dd
-haxelib install newgrounds
+haxelib run lime rebuild extension-webm windows
+haxelib install linc_luajit
+haxelib install actuate 
+haxelib git extension-webm https://github.com/KadeDev/extension-webm
+haxelib run lime rebuild extension-webm windows
 echo Finished!
 pause
