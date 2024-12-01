@@ -272,11 +272,9 @@ class Character extends FlxSprite
 				iconColor = FlxColor.fromRGB(75, 51, 114);
 
 				loadOffsetFile(curCharacter);
-				globalOffset = [0, -350];
 
 				playAnim('danceRight');
 
-				nativelyPlayable = true;
 			case 'shaggy-lose':
 				frames = Paths.getSparrowAtlas('characters/shaggy_gameover', 'shared');
 
