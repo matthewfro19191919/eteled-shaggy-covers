@@ -266,14 +266,22 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'shaggy_left', 30, false);
 				animation.addByPrefix('singDOWN', 'shaggy_down', 30, false);
 
-				barColor = FlxColor.fromRGB(51, 114, 74);
-
 				loadOffsetFile(curCharacter);
 				globalOffset = [0, -350];
 
 				playAnim('danceRight');
 
 				nativelyPlayable = true;
+			case 'shaggy-lose':
+				frames = Paths.getSparrowAtlas('characters/shaggy_gameover', 'shared');
+
+				animation.addByPrefix('firstDeath', 'shaggy_lose_start', 24, false);
+				animation.addByPrefix('deathLoopRight', 'shaggy_lose_loop1', 24, false);
+				animation.addByPrefix('deathLoopLeft', 'shaggy_lose_loop2', 24, false);
+				animation.addByPrefix('deathConfirm', 'shaggy_lose_retry', 30, false);
+
+				loadOffsetFile(curCharacter);
+				playAnim('firstDeath');
 			case 'bf-mii':
 				noteSkin = 'bf';
 				var tex = Paths.getSparrowAtlas('BOYFRIENDMII','shared',true);
