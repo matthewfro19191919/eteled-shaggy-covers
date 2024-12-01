@@ -1060,6 +1060,10 @@ class PlayState extends MusicBeatState
 				curGf = 'gf';
 		}
 
+		if (boyfriend.curCharacter == 'shaggy') {
+			gf.visible = false;
+		}
+
 		gf = new Character(400, 130, curGf);
 		gf.scrollFactor.set(0.95, 0.95);
 
