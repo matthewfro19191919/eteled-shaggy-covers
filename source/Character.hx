@@ -249,6 +249,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, false);
 				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 
+				iconColor = FlxColor.fromRGB(49, 176, 209);
+
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
 
 				loadOffsetFile(curCharacter);
@@ -265,6 +267,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'shaggy_right', 30, false);
 				animation.addByPrefix('singRIGHT', 'shaggy_left', 30, false);
 				animation.addByPrefix('singDOWN', 'shaggy_down', 30, false);
+
+				iconColor = FlxColor.fromRGB(75, 51, 114);
 
 				loadOffsetFile(curCharacter);
 				globalOffset = [0, -350];
@@ -306,6 +310,8 @@ class Character extends FlxSprite
 
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
 
+				iconColor = FlxColor.fromRGB(49, 176, 209);
+
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
@@ -313,7 +319,7 @@ class Character extends FlxSprite
 				flipX = true;
 			case 'eteled1':
 				noteSkin = 'eteled';
-				iconColor = 'FFFFFFFF';
+				iconColor = FlxColor.fromRGB(125, 150, 201);
 				tex = Paths.getSparrowAtlas('eteled1_assets','shared',true);
 				frames = tex;
 				animation.addByPrefix('idle', 'eteled idle dance', 24);
@@ -328,7 +334,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 			case 'eteled2':
 				noteSkin = 'eteled';
-				iconColor = 'FF181A22';
+				iconColor = FlxColor.fromRGB(125, 150, 201);
 				tex = Paths.getSparrowAtlas('eteled2_assets','shared',true);
 				frames = tex;
 				animation.addByPrefix('idle', 'eteled idle dance', 24);
@@ -359,7 +365,7 @@ class Character extends FlxSprite
 			case 'austin':
 				
 				noteSkin = 'austin';
-				iconColor = 'FF6A0200';
+				iconColor = FlxColor.fromRGB(180, 24, 24);
 				if (glitched)
 					tex = Paths.getSparrowAtlas('austinglitch_assets','shared',true);
 				else
@@ -386,7 +392,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 			case 'bf-austin':
 				noteSkin = 'austin';
-				iconColor = 'FF6A0200';
+				iconColor = FlxColor.fromRGB(180, 24, 24);
 				if (glitched)
 					tex = Paths.getSparrowAtlas('austinglitch_assets','shared',true);
 				else
