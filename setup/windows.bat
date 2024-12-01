@@ -21,6 +21,7 @@ haxelib git faxe https://github.com/uhrobots/faxe
 haxelib git polymod https://github.com/larsiusprime/polymod.git
 haxelib git extension-webm https://github.com/KadeDev/extension-webm
 haxelib install hxcpp-debug-server
+haxelib git thx.core https://github.com/fponticelli/thx.core 76d87418fadd92eb8e1b61f004cff27d656e53dd
 haxelib install newgrounds
 echo Finished!
 pause
