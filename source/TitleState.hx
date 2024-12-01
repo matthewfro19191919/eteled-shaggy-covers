@@ -85,17 +85,6 @@ class TitleState extends MusicBeatState
 
 		trace('hello');
 
-		// DEBUG BULLSHIT
-
-		super.create();
-
-		// NGio.noLogin(APIStuff.API);
-
-		#if ng
-		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
-		trace('NEWGROUNDS LOL');
-		#end
-
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
 		#elseif CHARTING
@@ -290,14 +279,6 @@ class TitleState extends MusicBeatState
 
 		if (pressedEnter && !transitioning && skippedIntro)
 		{
-			#if !switch
-			NGio.unlockMedal(60960);
-
-			// If it's Friday according to da clock
-			if (Date.now().getDay() == 5)
-				NGio.unlockMedal(61034);
-			#end
-
 			if (FlxG.save.data.flashing)
 				titleText.animation.play('press');
 
